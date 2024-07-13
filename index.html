@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <!-- BootStrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Owl Carousel CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS CSS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Navbar Section Start -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white py-4 main-menu sticky-top overflow-hidden"
+    >
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="/index.html">Web Trust</a>
+
+        <!-- Toggle button for small screens -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Centered item -->
+        <div class="navbar-collapse justify-content-center collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right side items -->
+        <div class="navbar-collapse justify-content-end collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-cart-plus"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/login.html">Sign In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas menu -->
+    <div
+      class="offcanvas offcanvas-start setWidth overflow-hidden"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Navbar Section End -->
+
+    <!-- Banner Section Start -->
+    <div class="banner overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <!-- Left side -->
+          <div class="col-lg-6 col-sm-12 col-md-12 text-center text-lg-start">
+            <h1>Homestyle Italian Cooking Best Enjoyed with Family.</h1>
+            <a href="#" class="btn btn-primary my-3"
+              ><i class="fa-solid fa-bars"></i> Get Your Menu</a
+            >
+            <a
+              href="https://www.youtube.com/embed/kRCH8kD1GD0"
+              class="btn btn-primary my-3"
+              target="_blank"
+            >
+              <i class="fa-solid fa-play"></i> Watch Video
+            </a>
+          </div>
+
+          <!-- Right side -->
+          <div class="col-lg-6 d-none d-md-block">
+            <img src="/images/bestInTown.png" alt="Image" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Section End -->
+
+    <!-- Category Slider Section Start -->
+    <div class="category py-5 overflow-hidden">
+      <div class="container">
+        <h2>Our Category</h2>
+        <div class="row">
+          <div class="owl-carousel owl-carousel1 owl-theme">
+            <div class="item p-5">
+              <img
+                src="/images/sandwiches.png"
+                alt="sandwiches"
+                class="img-fluid"
+              />
+              <h4 class="pt-3">Sandwiches</h4>
+            </div>
+            <div class="item p-5">
+              <img src="/images/tacos.png" alt="tacos" class="img-fluid" />
+              <h4 class="pt-3">Tacos</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Category SLider Section End -->
+
+    <!-- Features Slider Section Start -->
+    <div class="features py-5 overflow-hidden">
+      <div class="container">
+        <h2>Our Featured & Newest Restaurant</h2>
+        <div class="row">
+          <div class="owl-carousel owl-carousel3 owl-theme">
+            <div class="item">
+              <div class="card">
+                <div class="img">
+                  <img
+                    src="/images/fish-tacos.png"
+                    class="card-img-top img-fluid"
+                    alt="fish-tacos"
+                  />
+                </div>
+                <div class="card-body text-start mt-3">
+                  <h4>$60</h4>
+                  <h4>Fish Tacos</h4>
+                  <p class="list-unstyled">
+                    <i class="fa fa-circle-check"></i> 4 Piece Chicken
+                  </p>
+                  <p class="list-unstyled">
+                    <i class="fa fa-circle-check"></i> Spicy Sauce
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    ><i class="fa-solid fa-cart-plus"></i> Add to cart</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Features SLider Section End -->
+
+    <!-- Promotion Section Start -->
+    <div class="promotion py-5 overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <h2 class="pb-3">Explore Our Irresistible Promotions!</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Promotion Section End -->
+
+    <!-- Traditional Food Section Start -->
+    <div class="traditional py-5 overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Some Traditional Food Based on Location</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <nav class="navbar navbar-expand-sm navbar-light bg-light py-3">
+            <div class="container">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >All Categories</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Fried Rice</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pasta</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pizzas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Sandwiches</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nachos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Tacos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="row justify-content-start">
+          <div class="col-md-4">
+            <div class="card m-3">
+              <div class="traditional-img">
+                <img
+                  src="/images/bbq-pulled-pork-sandwich.jpg"
+                  class="card-img-top img-fluid"
+                  alt="BBQ Pulled Pork Sandwich"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-text">$15</h5>
+                <h4 class="card-title">BBQ Pulled Pork Sandwich</h4>
+                <p class="card-text">
+                  <i class="fa-regular fa-circle-check"></i> 4 Piece Chicken
+                </p>
+                <p class="card-text">
+                  <i class="fa-regular fa-circle-check"></i> Spicy Sauce
+                </p>
+                <button class="btn btn-primary">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card m-3">
+              <div class="traditional-img">
+                <img
+                  src="/images/bbq-pulled-pork-sandwich.jpg"
+                  class="card-img-top img-fluid"
+                  alt="BBQ Pulled Pork Sandwich"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-text">$15</h5>
+                <h4 class="card-title">BBQ Pulled Pork Sandwich</h4>
+                <p class="card-text">
+                  <i class="fa-regular fa-circle-check"></i> 4 Piece Chicken
+                </p>
+                <p class="card-text">
+                  <i class="fa-regular fa-circle-check"></i> Spicy Sauce
+                </p>
+                <button class="btn btn-primary">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card m-3">
+              <div class="traditional-img">
+                <img
+                  src="/images/bbq-pulled-pork-sandwich.jpg"
+                  class="card-img-top img-fluid"
+                  alt="BBQ Pulled Pork Sandwich"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-text">$15</h5>
+                <h4 class="card-title">BBQ Pulled Pork Sandwich</h4>
+                <p class="card-text">
+                  <i class="fa-regular fa-circle-check"></i> 4 Piece Chicken
+                </p>
+                <p class="card-text">
+                  <i class="fa-regular fa-circle-check"></i> Spicy Sauce
+                </p>
+                <button class="btn btn-primary">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card m-3">
+              <div class="traditionl-img">
+                <img
+                  src="/images/bbq-pulled-pork-sandwich.jpg"
+                  class="card-img-top img-fluid"
+                  alt="BBQ Pulled Pork Sandwich"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-text">$15</h5>
+                <h4 class="card-title">BBQ Pulled Pork Sandwich</h4>
+                <p class="card-text">
+                  <i class="fa-regular fa-circle-check"></i> 4 Piece Chicken
+                </p>
+                <p class="card-text">
+                  <i class="fa-regular fa-circle-check"></i> Spicy Sauce
+                </p>
+                <button class="btn btn-primary">
+                  <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center mt-4">
+          <div class="col-md-12">
+            <a href="" class="btn">See More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Traditional Food Section End -->
+
+    <!-- Work Section Start -->
+    <div class="work overflow-hidden">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 text-center pb-2">
+            <h1>The Process of Crafting Your Dining Experience</h1>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <div class="card" data-aos="fade-right">
+              <h2>
+                <i class="fa-solid fa-location-dot"></i> Set Your Location
+              </h2>
+              <p>
+                A High-Quality Solution Beautifully Crafted for Our Customers
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" data-aos="fade-right">
+              <h2><i class="fa-solid fa-utensils"></i> Select Food</h2>
+              <p>Providing an Upscale and Elegant Ambiance</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" data-aos="fade-right">
+              <h2><i class="fa-solid fa-wallet"></i> Pay Cash or Online</h2>
+              <p>
+                Pay Cash or Online Providing an upscale and elegant ambiance for
+                ..
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" data-aos="fade-right">
+              <h2 class="h4">
+                <i class="fa-solid fa-truck"></i> Delivery or Pickup
+              </h2>
+              <p>Allowing customers to easily book tables through</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Work Section End -->
+
+    <!-- Accordion Section Start -->
+    <div class="accordion-section py-5 overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-left">
+            <h1 class="mb-4">Foodie FAQ: Your Culinary Queries Answered</h1>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Can I make a reservation online?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <hr />
+                  <div class="accordion-body">
+                    We offer [insert type of cuisine, e.g., Italian, Asian
+                    fusion, Mediterranean] cuisine that combines traditional
+                    flavors with modern twists
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    What type of cuisine does your restaurant offer?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <hr />
+                  <div class="accordion-body">
+                    We offer [insert type of cuisine, e.g., Italian, Asian
+                    fusion, Mediterranean] cuisine that combines traditional
+                    flavors with modern twists
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-lg-block d-none">
+            <div class="d-flex gap-3">
+              <div class="col-lg-8">
+                <img src="/images/room.png" alt="room" class="img-fluid" />
+              </div>
+              <div
+                class="col-lg-4 success1 rounded d-flex align-items-center"
+              ></div>
+            </div>
+
+            <div class="d-flex gap-3 mt-3">
+              <div class="col-lg-4 success2 rounded"></div>
+              <div class="col-lg-8">
+                <img src="/images/weaiter.png" alt="man" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Accordion Section End -->
+
+    <!-- Customer Say Section Start -->
+    <div class="customer py-5 overflow-hidden">
+      <div class="container">
+        <div class="row mb-3" data-aos="fade-left">
+          <h2>What’s Our Customer Say</h2>
+        </div>
+        <div class="row">
+          <div class="owl-carousel owl-carousel4 owl-theme">
+            <div class="item" data-aos="fade-up">
+              <div class="d-flex flex-column h-100">
+                <p class="card-text p-3">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ullam, officia.
+                </p>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="col-md-4 col-3">
+                      <img
+                        src="/images/customer-1.jpg"
+                        alt="customer-1"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="col-md-8 col-9 ps-2">
+                      <h4>
+                        <i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i>
+                      </h4>
+                      <h5>Jonson Ray</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-aos="fade-up">
+              <div class="d-flex flex-column h-100">
+                <p class="card-text p-3">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ullam, officia.
+                </p>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="col-md-4 col-3">
+                      <img
+                        src="/images/customer-1.jpg"
+                        alt="customer-1"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="col-md-8 col-9 ps-2">
+                      <h4>
+                        <i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i>
+                      </h4>
+                      <h5>Jonson Ray</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Customer Say Section End -->
+
+    <!-- Latest Section Start -->
+    <div class="latest overflow-hidden">
+      <div class="container py-5">
+        <div class="row">
+          <div
+            class="latest-top d-flex mb-5 justify-content-between align-items-center"
+          >
+            <h2>Our Latest news</h2>
+            <a href="" class="btn">See More</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="owl-carousel owl-carousel2 owl-theme">
+            <div class="item">
+              <div class="card d-flex flex-column h-100">
+                <div class="card-body">
+                  <p class="card-text">
+                    Flavorful Fusion: Exploring the Art of Culinary Blending
+                  </p>
+                  <a href="" class="btn">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card d-flex flex-column h-100">
+                <div class="card-body">
+                  <p class="card-text">
+                    Flavorful Fusion: Exploring the Art of Culinary Blending
+                  </p>
+                  <a href="" class="btn">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- latest Section End -->
+
+    <!-- Restaurant Section Start -->
+    <div class="restaurant py-5 overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="mb-3">Find out Better Restaurant Food Experience</h1>
+            <p>
+              We've done it carefully and simply. Combined with the ingredients
+              makes for beautiful landings.
+            </p>
+            <div class="d-flex mt-5 gap-4">
+              <button class="btn">
+                <i class="fa-solid fa-play"></i> Play Store
+              </button>
+              <button class="btn">
+                <i class="fa-brands fa-apple"></i> App Store
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 align-items-bottom d-none d-lg-block">
+            <img src="/images/foodList.png" alt="foodList" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Restaurant Section End -->
+
+
+
+    <!-- Footer Section Start -->
+    <div class="footer pt-5 overflow-hidden">
+      <footer class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 pb-3">
+              <h2 class="mb-3">Web Trust</h2>
+              <p>
+                At WebTrust, we invite you to embark on a journey of taste and
+                delight.Our tables are more than just places.
+              </p>
+              <div class="d-flex">
+                <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class=""><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="col-md-3 pb-3">
+              <h2>Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="btn">My Profile</a></li>
+                <li><a href="/html/about.html" class="btn">About Us</a></li>
+                <li><a href="/html/contact.html" class="btn">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 pb-3">
+              <h2>Terms & Privacy</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="btn">Privacy & Policy</a></li>
+                <li><a href="#" class="btn">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 pb-3">
+              <h2>Subscribe our Newsletter</h2>
+              <form class="d-flex gap-3">
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Email"
+                  />
+                </div>
+                <button type="submit" class="btn btn-success mb-3">
+                  Subscribe
+                </button>
+              </form>
+              <h4 class="mb-3">We accept Payment methods:</h4>
+              <div class="d-flex">
+                <img src="/images/visa.png" alt="Visa" class="me-2" />
+                <img
+                  src="/images/american-express.png"
+                  alt="American Express"
+                  class="me-2"
+                />
+                <img src="/images/paypal.png" alt="PayPal" class="me-2" />
+                <img src="/images/mastercard.png" alt="mastercard" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="content">
+            <p>Copyright 2024, WTS. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section End -->
+
+    <!-- JavaScript CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JavaScript Owl Carousel CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- AOS JS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

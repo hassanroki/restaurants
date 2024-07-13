@@ -1,0 +1,29 @@
+.summary h5 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+  color: #747474;
+}
+
+.summary p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 700;
+  font-style: normal;
+  color: #262626;
+}
+
+.summary .card {
+  padding: 20px 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.active{
+  background-color: #F01543 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #000;
+}
+

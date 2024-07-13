@@ -1,0 +1,262 @@
+@media only screen and (max-width: 991px) {
+  /* Customer Say Section Start */
+  .customer .card-text {
+    min-height: 35vh;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Banner Section Start */
+  .banner h1 {
+    font-size: 44px;
+    line-height: 60px;
+  }
+
+  /* Category Slider Section Start */
+  .category h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  /* Features Section Start */
+  .features h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  /* Promotion Section Start */
+  .promotion h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* Traditional Food Section Start */
+  .traditional h1 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  /* Work Section Start */
+  .work h1 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  /* Accordion Section Start */
+  .accordion-section h1 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  /* Customer Say Section Start */
+  .customer h2 {
+    font-size: 28px;
+    line-height: 29px;
+  }
+
+  .customer .card-text {
+    min-height: 50vh;
+  }
+
+  /* Latest Section Start */
+  .latest .card p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* Restaurant Section Start */
+  .restaurant h1 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  /* About FIle */
+  /* Our Story Section Start */
+  .our-story .our-story-content h1 {
+    padding-top: 20px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .process-food .process-food-content h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  /* Order Item Start */
+  .popular-item h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  /* Order Item End */
+
+  /* Contact Us File */
+  /* Contact Section Start */
+  .contact h1 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Customer Say Start */
+  .customer .card-text {
+    min-height: 35vh;
+  }
+  /* Customer Say End */
+
+  /* About File */
+  /* Process Food Order Section End */
+  .process-food .process-food-content i {
+    font-size: 24px;
+    background-color: #262e49;
+    padding: 8px 12px;
+    border-radius: 8px 8px;
+  }
+
+  /* Popular Item Section Start */
+  .popular-item .item h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  /* Modal */
+  .popular-item .modal h4 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  /* Popular Item Section End */
+}
+
+@media only screen and (max-width: 390px) {
+  /* Banner Section Start */
+  .banner h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .banner .btn-primary {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px 15px;
+  }
+
+  /* Category Section0 */
+  .category .item img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  /* Feature Section */
+  .features h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  /* Promotion Section */
+  .promotion h2 {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  /* Some Traditional, Work, Accordion, Customer, Latest Section */
+  .traditional h1,
+  .work h1,
+  .accordion-section h1,
+  .customer h2,
+  .latest .latest-top h2,
+  .restaurant h1 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  /* Common Banner Section */
+  .commonBanner h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .commonBanner h4 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  /* About File */
+  /* Our Story, Process Food Section */
+  .our-story .our-story-content h1,
+  .process-food .process-food-content h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  /* Contact File */
+  .contact h1 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+}
+
+@media only screen and (max-width: 360px) {
+  /* Navbar Section Start */
+  .setWidth {
+    width: 150px !important;
+  }
+
+  /* Feature Section Start */
+  .features h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  /* Promotion Section Start */
+  .promotion h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* Traditional Food Section Start */
+  .traditional .navbar .navbar-nav li:first-child {
+    margin-top: 15px;
+  }
+
+  /* Customer Say Section Start */
+  .customer h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  /* Footer Section Start */
+  .footer .content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* About FIle */
+  /* Our Story Section Start */
+  .our-story .our-story-content h1 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .our-story .our-story-content h4 {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .latest .latest-top h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  /* About File */
+  /* Popular Item Section Start */
+  .popular-item .item h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  /* Popular Item Section End */
+}

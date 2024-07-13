@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard Web Trust</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="sb-nav-fixed">
+    <!-- Side Navbar Section Start -->
+
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+      <!-- Navbar Brand-->
+      <a class="navbar-brand ps-3" href="/admin-panel/index.html"
+        ><i class="fa-solid fa-house-user"></i> Web Trust</a
+      >
+      <!-- Sidebar Toggle-->
+      <button
+        class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+        id="sidebarToggle"
+        href="#!"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Navbar Search-->
+      <form
+        class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+      >
+        <div class="input-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Search for..."
+            aria-label="Search for..."
+            aria-describedby="btnNavbarSearch"
+          />
+          <button class="btn btn-primary" id="btnNavbarSearch" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+      <!-- Navbar-->
+      <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><i class="fas fa-user fa-fw"></i
+          ></a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li><a class="dropdown-item" href="#!">My Profile</a></li>
+            <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="/admin/login.html">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="layoutSidenav">
+      <!-- Left Site Menu Item Start -->
+      <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <div class="sb-sidenav-menu">
+            <div class="nav">
+              <!-- Dashboard -->
+              <a class="nav-link" href="/admin-panel/index.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Dashboard
+              </a>
+
+              <!-- Order -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayouts"
+                aria-expanded="false"
+                aria-controls="collapseLayouts"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fa-solid fa-list"></i>
+                </div>
+                Orders
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayouts"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="/admin-panel/order/allOrder.html"
+                    >All Order</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/order/orderDelevery.html"
+                    >Delivery Order</a
+                  >
+                  <a class="nav-link" href="/admin-panel/order/orderPickUp.html"
+                    >PickUp Order</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/order/orderInRestaurant.html"
+                    >InRestaurant Order</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Product Manage -->
+              <a
+                class="nav-link collapsed active"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayoutsTwo"
+                aria-expanded="false"
+                aria-controls="collapseLayoutsTwo"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fa-brands fa-product-hunt"></i>
+                </div>
+                Product Manage
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayoutsTwo"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/productManage/productCreate.html"
+                    >Create Product</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/productManage/product.html"
+                    >Product</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/productManage/categories.html"
+                    >Categories</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/productManage/optionalItems.html"
+                    >Optional Items</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/productManage/promotion.html"
+                    >Promotions</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/productManage/coupon.html"
+                    >Coupon</a
+                  >
+                  <a
+                    class="nav-link active"
+                    href="/admin-panel/productManage/deliveryArea.html"
+                    >Delivery Area</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/productManage/timeSlots.html"
+                    >Time Slots</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Customer List -->
+              <a
+                class="nav-link"
+                href="/admin-panel/customerList/customer.html"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fa-solid fa-list"></i>
+                </div>
+                Customer List
+              </a>
+
+              <!-- Product Reviews -->
+              <a
+                class="nav-link"
+                href="/admin-panel/productReview/productReview.html"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Product Reviews
+              </a>
+
+              <!-- Message -->
+              <a class="nav-link" href="/admin-panel/message/message.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                Message
+              </a>
+
+              <div class="sb-sidenav-menu-heading">Website Setup</div>
+
+              <!-- All Section -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayoutsThree"
+                aria-expanded="false"
+                aria-controls="collapseLayoutsThree"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-columns"></i>
+                </div>
+                All Section
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayoutsThree"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="/admin-panel/allSection/slider.html"
+                    >Sliders</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/allSection/testimonial.html"
+                    >Testimonials</a
+                  >
+                  <a class="nav-link" href="/admin-panel/allSection/faqs.html"
+                    >FAQs</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/allSection/faqAbout.html"
+                    >FAQ About</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/allSection/mobileApp.html"
+                    >Mobile App</a
+                  >
+                  <a
+                    class="nav-link" href="/admin-panel/allSection/craftingProcess.html"
+                    >Crafting Process
+                  </a>
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/allSection/sectionHeading.html"
+                    >Section Heading</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Pages -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayoutsFour"
+                aria-expanded="false"
+                aria-controls="collapseLayoutsFour"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fa-solid fa-pager"></i>
+                </div>
+                Pages
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayoutsFour"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="/admin-panel/pages/aboutUs.html"
+                    >About Us</a
+                  >
+                  <a class="nav-link" href="/admin-panel/pages/contactUs.html"
+                    >Contact Us</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/pages/privacyPolicy.html"
+                    >Privacy & Policy</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/pages/termCondition.html"
+                    >Terms & Conditions</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Blog -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayoutsFive"
+                aria-expanded="false"
+                aria-controls="collapseLayoutsFive"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fa-brands fa-blogger"></i>
+                </div>
+                Blog
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayoutsFive"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="/admin-panel/blog/blogs.html"
+                    >Blogs</a
+                  >
+                  <a class="nav-link" href="/admin-panel/blog/blogCategory.html"
+                    >Blogs Categories</a
+                  >
+                  <a class="nav-link" href="/admin-panel/blog/blogComment.html"
+                    >Blog Comments</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Website Footer -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayoutsSix"
+                aria-expanded="false"
+                aria-controls="collapseLayoutsSix"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-columns"></i>
+                </div>
+                Website Footer
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayoutsSix"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/websiteFooter/footer.html"
+                    >Footer</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/websiteFooter/socialLink.html"
+                    >Social Link</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/websiteFooter/paymentMethod.html"
+                    >Payment Method Images</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Website Setup -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayoutsSeven"
+                aria-expanded="false"
+                aria-controls="collapseLayoutsSeven"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-columns"></i>
+                </div>
+                Website Setup
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayoutsSeven"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/websiteSetup/seoSetup.html"
+                    >SEO Setup</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/websiteSetup/defaultAvatar.html"
+                    >Default Avatar</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/websiteSetup/notFoundImage.html"
+                    >Not Found Images</a
+                  >
+                </nav>
+              </div>
+
+              <div class="sb-sidenav-menu-heading">Settings</div>
+
+              <!-- Language -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayoutsEight"
+                aria-expanded="false"
+                aria-controls="collapseLayoutsEight"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fa-solid fa-language"></i>
+                </div>
+                Language
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayoutsEight"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="/admin-panel/language/language.html"
+                    >Language</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/language/themeLanguage.html"
+                    >Theme Language</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Settings -->
+              <a class="nav-link" href="/admin-panel/setting/setting.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fa-solid fa-gear"></i>
+                </div>
+                Settings
+              </a>
+
+              <!-- Payment Gateway -->
+              <a
+                class="nav-link"
+                href="/admin-panel/paymentMethod/paymentMethod.html"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                Payment Gateway
+              </a>
+
+              <!-- Email Config -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLayoutsNine"
+                aria-expanded="false"
+                aria-controls="collapseLayoutsNine"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-columns"></i>
+                </div>
+                Email Config
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseLayoutsNine"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/emailConfiq/template.html"
+                    >Template</a
+                  >
+                  <a
+                    class="nav-link"
+                    href="/admin-panel/emailConfiq/setting.html"
+                    >Settings</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Subscriber -->
+              <a class="nav-link" href="/admin-panel/subscribe/subscribe.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fa-regular fa-bell"></i>
+                </div>
+                Subscriber
+              </a>
+
+              <p class="bg-success p-2 text-white">Version: 1.0</p>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <!-- Delivery Area Section -->
+            <div class="all-order py-5">
+              <div class="row justify-content-between d-flex align-items-center">
+                <div class="col-md-6">
+                  <h2>Create Delivery Area</h2>
+                  <div class="d-flex">
+                    <a href="/admin-panel/index.html" class="btn">Home /</a>
+
+                    <a
+                      href="/admin-panel/productManage/deliveryAreaCreate.html"
+                      class="btn"
+                      >Create Delivery Area</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="/admin-panel/productManage/deliveryArea.html" class="btn btn-success">Back</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="create-product">
+                <div class="container mt-5">
+                    <h2>Basic Information</h2>
+                    <form>
+                      <div class="row">
+                        <div class="col-md-6 col-lg-6 col-12 mb-3">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-12 mb-3">
+                          <label for="minDeliveryTime" class="form-label">Minimum delivery time (Minutes)</label>
+                          <input type="text" class="form-control" id="minDeliveryTime" name="minDeliveryTime" required>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-12 mb-3">
+                          <label for="maxDeliveryTime" class="form-label">Maximum delivery time (Minutes)</label>
+                          <input type="text" class="form-control" id="maxDeliveryTime" name="maxDeliveryTime" required>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-12 mb-3">
+                          <label for="deliveryFee" class="form-label">Delivery Fee</label>
+                          <input type="date" class="form-control" id="deliveryFee" name="deliveryFee" required>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-12 mb-3">
+                          <label for="status" class="form-label">Status</label>
+                          <select class="form-select" id="status" name="status" required>
+                            <option selected disabled>Select Item</option>
+                            <!-- Add options here -->
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+          </div>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid px-4">
+            <div
+              class="d-flex align-items-center justify-content-between small"
+            >
+              <div class="text-muted">Copyright &copy; Your Website 2024</div>
+              <div>
+                <a href="#">Web Trust Service</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/scripts.js"></script>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/datatables-simple-demo.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/admin-panel/js/main.js"></script>
+  </body>
+</html>
